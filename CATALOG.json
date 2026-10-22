@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-22",
   "timezone": "Asia/Shanghai",
-  "status": "local_archive_prepared_github_login_required",
+  "status": "github_archive",
   "experiments": [
     {
       "id": "qwen-image21",
@@ -19,5 +19,6 @@
       "status": "v2_generated_and_muxed",
       "limitations": "short reference audio, similarity requires listening, no lip resynthesis"
     }
-  ]
+  ],
+  "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git"
 }
