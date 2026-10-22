@@ -1,0 +1,181 @@
+{
+  "92": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "130",
+        0
+      ],
+      "filename_prefix": "video/Lulu_Electric_Love_01",
+      "format": "auto"
+    }
+  },
+  "119": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "120": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "121": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "125",
+        0
+      ],
+      "vae": [
+        "120",
+        0
+      ]
+    }
+  },
+  "122": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "125",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ]
+    }
+  },
+  "123": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "124": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "134",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1.0
+    }
+  },
+  "125": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "129",
+        0
+      ],
+      "guider": [
+        "126",
+        0
+      ],
+      "sampler": [
+        "123",
+        0
+      ],
+      "sigmas": [
+        "124",
+        0
+      ],
+      "latent_image": [
+        "131",
+        1
+      ]
+    }
+  },
+  "126": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "134",
+        0
+      ],
+      "conditioning": [
+        "131",
+        0
+      ]
+    }
+  },
+  "127": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w6a8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "128": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "129": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 4581172306
+    }
+  },
+  "130": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "122",
+        0
+      ],
+      "audio": [
+        "121",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "131": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "128",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ],
+      "prompt": "integrated_multimodal_description: [Shot 1] One continuous vertical 9:16 polished 3D animated romantic comedy, exactly the two adult capybara characters from the first frame in the same cozy pastel living room. Preserve both faces, outfits and head accessories throughout. Taller golden Lulu on the left wears a tangerine on his head, orange shorts, pale green crossbody strap and a white round cute animal bag. Shorter golden Lumei on the right wears a pink dress and white ruffled bonnet with orange sprout ornament. Their faces and round bodies stay consistent. A steady medium full two-shot with a very gentle push in. At 0-3 seconds Lumei tilts her head, raises one small hand inquisitively and asks in clear Mandarin Chinese, \"你抗电吗？\" Lulu looks at her. At 3-6 seconds Lulu grins confidently, pats his chest once and replies in an amused warm male Mandarin voice, \"我超抗电！\" At 6-8 seconds Lumei gives a mischievous smile, steps close and says in a playful adult female Mandarin voice, \"那你试试这个。\" At 8-10 seconds she rises onto her toes and gives Lulu a quick innocent kiss on his cheek. A tiny pastel pink cartoon spark appears at the contact, followed by a few floating pink hearts. At 10-12 seconds Lulu freezes in comic surprise, eyes wide, does one brief silly full-body shiver with both hands lifted. His tangerine bounces slightly but remains on his head. It is a metaphorical romantic spark, no physical electrical apparatus. At 12-15 seconds Lulu blushes, relaxes into a goofy smile and says in Mandarin, \"完了，是心动的感觉。\" Lumei giggles beside him. Finish on both happy faces with a few softly rising heart particles. Clean controlled animation, readable acting, natural short limbs, stable character count, soft warm cinematic lighting. No written words or subtitles in the generated image.\noverall_soundscape: Clear Mandarin dialogue in two distinct adult cartoon voices. Female at opening: \"你抗电吗？\" Male: \"我超抗电！\" Female: \"那你试试这个。\" A cute kiss pop, a tiny playful sparkling chime at the kiss, one comedic spring boing during Lulu's shiver. Male at the end: \"完了，是心动的感觉。\" Gentle female giggle. Quiet cozy room ambience.\nnon_diegetic_music: Soft original playful pizzicato instrumental, low volume under dialogue, one brief musical pause for the surprised reaction and a warm sweet resolving chime at the end.",
+      "width": 352,
+      "height": 608,
+      "length": 362,
+      "first_frame": [
+        "150",
+        0
+      ]
+    }
+  },
+  "134": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "127",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "150": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "lulu_electric_start.png"
+    }
+  }
+}

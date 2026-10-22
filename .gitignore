@@ -1,0 +1,12 @@
+.env
+.env.*
+*token*
+*.safetensors
+*.gguf
+*.ckpt
+venv/
+.venv/
+__pycache__/
+*.log
+*.zip
+*.7z

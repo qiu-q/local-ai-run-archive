@@ -1,0 +1,110 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "sample_white_mug.jpg"
+    }
+  },
+  "6": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Edit <image1>: keep exactly the same plain white ceramic mug, its cylindrical body, rounded lip, smooth glossy glaze and curved handle on the right. Preserve its product shape, proportions, orientation and blank unprinted surface. Replace the plain gray tabletop and background with a refined cozy lifestyle product photography scene: place the mug on a light oak table next to a bright window, warm soft morning sunlight from the left, a folded beige linen napkin beside the mug, softly blurred green plants in the distant background. Keep the mug as the only drinkware, fully visible and the main subject. Natural contact shadow, realistic reflections, premium commercial photograph, calm warm neutral palette, no text, no logos, no people. Keep the existing camera angle and the mug position in the lower half of the portrait composition.",
+      "negative_prompt": "",
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "int8"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "6",
+        1
+      ],
+      "latent_image": [
+        "6",
+        2
+      ],
+      "seed": 2285114,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "Qwen21_Mug_Scene"
+    }
+  }
+}

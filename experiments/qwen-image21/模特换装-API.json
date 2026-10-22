@@ -1,0 +1,120 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "portrait_model_denim.png"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "clothing_light_blue_denim_shirt.png"
+    }
+  },
+  "6": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Edit <image1>: replace only the adult male model's dark green zip-neck top with the light blue denim button-up shirt shown in <image2>. Match the reference garment's light washed denim color, pointed collar, front button placket, single chest pocket, cuff construction, stitching and realistic denim texture. Fit the shirt naturally on his torso and shoulders, with correct fabric folds and perspective. Preserve the same person, face, skin tone, hair, downward head angle, body proportions, pose, camera crop, studio lighting and gray-blue background from <image1>. The shirt should be worn buttoned, not layered over the original green top. Remove the original green collar completely. Photorealistic fashion catalog quality. No added text or logos.",
+      "negative_prompt": "",
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ],
+      "images.image_2": [
+        "5",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "int8"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "6",
+        1
+      ],
+      "latent_image": [
+        "6",
+        2
+      ],
+      "seed": 2285113,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "Qwen21_TryOn"
+    }
+  }
+}

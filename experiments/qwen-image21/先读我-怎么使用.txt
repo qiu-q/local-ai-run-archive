@@ -1,0 +1,23 @@
+﻿ComfyUI 图像编辑测试｜Qwen Image 2.1 INT8
+
+已实跑成功：
+1. 模特换装：模特图 + 牛仔衬衫图，生成穿上目标服装的照片。
+2. 水杯换场景：保留白色陶瓷杯，替换桌面、背景和光线。
+
+使用方法：
+打开桌面 MiniMax-H3 文件夹里的启动程序，等待 ComfyUI 页面打开。
+把“模特换装-拖入ComfyUI.json”或“水杯换场景-拖入ComfyUI.json”拖进页面。
+在“加载图像”节点上传自己的素材；换装需要一张模特图和一张目标服装图。
+在文字编码节点修改编辑要求，点击运行。
+
+默认设置：768像素面积基准、25步、CFG 1、Euler、Simple。换装结果672x864，水杯结果640x960。
+模型已装在原ComfyUI/models目录，不包含在本素材包中。
+没有使用云端图像编辑；示例素材来自公开来源。
+
+能力说明：这是通用图像编辑换装，视觉近似试穿，不是服装尺码或真实上身效果测量。人物及商品细节仍需检查。
+
+素材来源：
+模特、衬衫：Comfy-Org/workflow_templates 官方示例
+https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_2_1_image_edit.json
+水杯：KATRIN BOLOVTSOVA / Pexels
+https://www.pexels.com/photo/white-ceramic-mug-on-white-table-6312237/

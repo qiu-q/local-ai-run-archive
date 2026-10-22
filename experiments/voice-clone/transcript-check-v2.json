@@ -1,0 +1,32 @@
+[
+  {
+    "index": 1,
+    "expected": "老婆，我干AI干出工伤了！",
+    "recognized": "老婆,我干 AI 干出工商了!"
+  },
+  {
+    "index": 2,
+    "expected": "你干啥了？",
+    "recognized": "你干啥啦?"
+  },
+  {
+    "index": 3,
+    "expected": "你就点个Yes？",
+    "recognized": "你就点个YES"
+  },
+  {
+    "index": 4,
+    "expected": "我负责最终决策！",
+    "recognized": "我负责最终决策"
+  },
+  {
+    "index": 5,
+    "expected": "开启自动确认。",
+    "recognized": "开启自动确认"
+  },
+  {
+    "index": 6,
+    "expected": "别！公司就我一个活人了！",
+    "recognized": "别,公司就我一个活人了。"
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "92": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "130",
+        0
+      ],
+      "filename_prefix": "video/Lulu_Yes_Work_01",
+      "format": "auto"
+    }
+  },
+  "119": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    }
+  },
+  "120": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "121": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "125",
+        0
+      ],
+      "vae": [
+        "120",
+        0
+      ]
+    }
+  },
+  "122": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "125",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ]
+    }
+  },
+  "123": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "124": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "134",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1.0
+    }
+  },
+  "125": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "129",
+        0
+      ],
+      "guider": [
+        "126",
+        0
+      ],
+      "sampler": [
+        "123",
+        0
+      ],
+      "sigmas": [
+        "124",
+        0
+      ],
+      "latent_image": [
+        "131",
+        1
+      ]
+    }
+  },
+  "126": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "134",
+        0
+      ],
+      "conditioning": [
+        "131",
+        0
+      ]
+    }
+  },
+  "127": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w6a8.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "128": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "129": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 85106221973
+    }
+  },
+  "130": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "122",
+        0
+      ],
+      "audio": [
+        "121",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "131": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "128",
+        0
+      ],
+      "vae": [
+        "119",
+        0
+      ],
+      "prompt": "integrated_multimodal_description: A vertical 9:16 polished 3D animated comedy with exactly the two adult golden capybara characters from the first frame. Keep the taller male Lulu's tangerine with green leaf on his head, orange shorts, pale green crossbody strap and small white round animal bag. Keep shorter female Lumei's pink dress, white ruffled bonnet, pink bow and orange sprout head ornament. Rounded broad orange muzzles, glossy black eyes, tiny round ears, same character identity throughout. The cozy living room contains a computer desk beside the sofa. Comedic exaggerated facial acting, warm soft lighting, crisp cute animation.\n[Shot 1, 0-3 seconds] Quickly settle from the first frame into a medium two-shot beside the desk. Lulu slumps exhausted into his desk chair, lifts one paw with a tiny white bandage around its raised index digit, and complains in adult male Mandarin, \"老婆，我干AI干出工伤了！\" Lumei leans toward him, surprised, and asks in adult female Mandarin, \"你干啥了？\" The tangerine tilts comically, staying attached.\n[Shot 2, 3-7 seconds] Hard cut to an over-the-shoulder view of Lulu sitting at a neat computer desk with monitor, mouse and keyboard. The monitor has a simple dark AI chat window with generic blank interface shapes. Lulu lazily clicks the mouse twice using his bandaged digit, sipping milk tea with the other paw. Each click is followed by a comically tiny wince and a dramatic wrist shake. This is an easy job despite his exaggerated acting. His costume and tangerine remain identical.\n[Shot 3, 7-10 seconds] Cut back to a medium two-shot at the computer desk, Lumei standing beside the seated Lulu. Lumei raises an eyebrow and asks, \"你就点个Yes？\" Lulu proudly straightens his back and raises the bandaged digit as if making an important speech, saying, \"我负责最终决策！\"\n[Shot 4, 10-15 seconds] A computer notification chime. Lumei looks at the screen and calmly says, \"开启自动确认。\" She reaches toward the mouse. Lulu suddenly goes wide-eyed, lunges forward and covers the mouse with both paws, crying, \"别！公司就我一个活人了！\" Lumei turns a deadpan gaze toward the camera. End with Lulu protectively hugging the computer mouse to his chest, panicked face, tangerine tilted. Freeze the reaction briefly. Readable simple poses, exactly two characters, consistent clothing and accessories. No baked-in subtitles or written text; screen UI lettering and captions will be added later.\noverall_soundscape: Clear colloquial Mandarin Chinese dialogue, two distinct adult cartoon voices, warm low male Lulu and bright female Lumei. Opening male: \"老婆，我干AI干出工伤了！\" female: \"你干啥了？\" Two crisp mouse click sounds in the flashback. Female at seven seconds: \"你就点个Yes？\" male: \"我负责最终决策！\" Computer notification chime at ten seconds. Female: \"开启自动确认。\" Male urgently at the end: \"别！公司就我一个活人了！\" A comedic whoosh as he grabs the mouse, then silence for the reaction.\nnon_diegetic_music: Original mock-serious office documentary instrumental at the opening, abruptly muted for the two mundane mouse clicks. A tiny playful pizzicato under the final exchange, stop music sharply for the final panicked line.",
+      "width": 416,
+      "height": 736,
+      "length": 362,
+      "first_frame": [
+        "150",
+        0
+      ]
+    }
+  },
+  "134": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "127",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "150": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "lulu_electric_start.png"
+    }
+  }
+}
