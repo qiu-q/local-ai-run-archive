@@ -18,6 +18,12 @@
       "path": "experiments/voice-clone",
       "status": "v2_generated_and_muxed",
       "limitations": "short reference audio, similarity requires listening, no lip resynthesis"
+    },
+    {
+      "id": "ten-outfit-dance",
+      "path": "experiments/ten-outfit-dance",
+      "status": "10_outfit_images_and_10_animated_clips_completed_30s_montage",
+      "limitations": "regenerated motion, 352x608 native video, small face/hand drift possible"
     }
   ],
   "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git"

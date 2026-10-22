@@ -1,0 +1,72 @@
+[
+  {
+    "name": "01-JK黑丝",
+    "prompt_id": "2d4caf9e-4c1f-485f-9da4-907d9a723b79",
+    "status": "success",
+    "seconds": 253.489,
+    "conditioning": "first_last_with_vl"
+  },
+  {
+    "name": "02-洛丽塔白丝",
+    "prompt_id": "c4395bcd-46e1-46c4-8183-690081fba06e",
+    "status": "success",
+    "seconds": 246.118,
+    "conditioning": "first_last_with_vl"
+  },
+  {
+    "name": "03-经典女仆",
+    "prompt_id": "ef625fa5-2a83-442a-b778-4e70c4e2390a",
+    "status": "success",
+    "seconds": 245.02,
+    "conditioning": "first_last_with_vl"
+  },
+  {
+    "name": "04-红白巫女",
+    "prompt_id": "1178025f-ecd5-4142-8280-91078a0cbb32",
+    "status": "success",
+    "seconds": 179.821,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "05-蓝白魔法少女",
+    "prompt_id": "148b5693-774f-4a3a-a844-cc1775dd6f63",
+    "status": "success",
+    "seconds": 43.281,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "06-哥特洛丽塔",
+    "prompt_id": "9389a745-af8f-4641-8238-c3b6d2d47918",
+    "status": "success",
+    "seconds": 33.0,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "07-精灵幻想",
+    "prompt_id": "0d0e05c0-0728-4c84-b918-8d2d4792373f",
+    "status": "success",
+    "seconds": 45.337,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "08-未来战术服",
+    "prompt_id": "30aee01b-1932-433a-b246-2a6e3fbcd133",
+    "status": "success",
+    "seconds": 71.823,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "09-魔女黑丝",
+    "prompt_id": "196e0a04-9732-4acc-a298-bc16d100c646",
+    "status": "success",
+    "seconds": 68.265,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  },
+  {
+    "name": "10-粉白偶像",
+    "prompt_id": "8d9b26a6-40d4-41b1-a126-94c422b0a3e3",
+    "status": "success",
+    "seconds": 33.043,
+    "conditioning": "shared_text_with_first_last_vae_guides"
+  }
+]

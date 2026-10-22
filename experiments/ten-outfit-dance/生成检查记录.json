@@ -1,0 +1,60 @@
+{
+  "width": 352,
+  "height": 608,
+  "fps": 24.0,
+  "duration": 30.0,
+  "frames": 720,
+  "outfits": [
+    {
+      "outfit": "01-JK黑丝",
+      "frames_used": 72,
+      "mean_frame_change": 1.462274245917797
+    },
+    {
+      "outfit": "02-洛丽塔白丝",
+      "frames_used": 72,
+      "mean_frame_change": 1.4303945624072787
+    },
+    {
+      "outfit": "03-经典女仆",
+      "frames_used": 72,
+      "mean_frame_change": 1.5025187023508717
+    },
+    {
+      "outfit": "04-红白巫女",
+      "frames_used": 72,
+      "mean_frame_change": 1.9890575442515628
+    },
+    {
+      "outfit": "05-蓝白魔法少女",
+      "frames_used": 72,
+      "mean_frame_change": 0.7754649923930705
+    },
+    {
+      "outfit": "06-哥特洛丽塔",
+      "frames_used": 72,
+      "mean_frame_change": 0.9001406794282752
+    },
+    {
+      "outfit": "07-精灵幻想",
+      "frames_used": 72,
+      "mean_frame_change": 1.0220112514642763
+    },
+    {
+      "outfit": "08-未来战术服",
+      "frames_used": 72,
+      "mean_frame_change": 1.8874924117830438
+    },
+    {
+      "outfit": "09-魔女黑丝",
+      "frames_used": 72,
+      "mean_frame_change": 0.8665214972177022
+    },
+    {
+      "outfit": "10-粉白偶像",
+      "frames_used": 72,
+      "mean_frame_change": 1.453290317574857
+    }
+  ],
+  "audio_frames": 1407
+}

@@ -27,3 +27,11 @@
 ## 使用限制与来源
 
 换装属于图像编辑近似效果，不表示真实尺码适配。声线参考仅约3—4秒，第二版仍可能有合成痕迹，未重做口型。水豚角色及第三方参考素材不因此获得新授权，参见各实验说明。示例水杯照片来源 Pexels / KATRIN BOLOVTSOVA，模特与衣服来源 Comfy-Org 官方工作流示例。
+
+## 十套换装舞蹈
+
+同一位原创22岁成年模特，Qwen Image 2.1编辑十套造型，MiniMax H3生成十段动作，合成为30秒视频。动作重新生成，非原舞蹈逐帧换装。
+
+[30秒成片](experiments/ten-outfit-dance/ten-outfit-dance-30s.mp4) · [运行记录](experiments/ten-outfit-dance/video-run-results.json)
+
+![十套造型](experiments/ten-outfit-dance/十套造型总览.png)

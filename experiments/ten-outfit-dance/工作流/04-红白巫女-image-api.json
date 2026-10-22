@@ -1,0 +1,110 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "adult_dancer_reference.png"
+    }
+  },
+  "6": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Edit <image1>. This is the same original 22-year-old adult woman. Preserve her recognizable facial identity, chestnut brown long straight hair, skin tone and natural adult proportions. Make a photorealistic full-body fashion portrait of her in the same simple pale beige room and gray doorway. Move the camera back enough to show her entire head, legs and both shoes, with a small margin above and below. She stands naturally facing the camera, making a small heart with both hands at upper chest height, smiling gently. Replace her clothing with the following outfit, and remove the previous outfit completely: A traditional-inspired red and white shrine maiden cosplay: white wide-sleeved kimono top, red sash and long red hakama trousers reaching the ankles, white tabi socks and simple red sandals. Keep the same face and hairstyle; only add the listed small costume accessories. Natural soft daylight and realistic fabric details, coherent hands, two arms and two legs, no extra people, no text, no watermark. This is fully clothed adult fashion cosplay, opaque fabrics and normal catalog posing.",
+      "negative_prompt": "",
+      "resolution": 768,
+      "images.image_1": [
+        "4",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "device": "auto",
+      "dtype": "int8"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "6",
+        1
+      ],
+      "latent_image": [
+        "6",
+        2
+      ],
+      "seed": 22612313,
+      "steps": 25,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "Outfit10/04-红白巫女"
+    }
+  }
+}
