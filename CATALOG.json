@@ -24,6 +24,12 @@
       "path": "experiments/ten-outfit-dance",
       "status": "10_outfit_images_and_10_animated_clips_completed_30s_montage",
       "limitations": "regenerated motion, 352x608 native video, small face/hand drift possible"
+    },
+    {
+      "id": "h3-educational-promo",
+      "path": "experiments/h3-educational-promo",
+      "status": "29.5s_edited_with_doubao_voice",
+      "new_h3_generation": false
     }
   ],
   "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git",
