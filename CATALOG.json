@@ -30,6 +30,13 @@
       "path": "experiments/h3-educational-promo",
       "status": "29.5s_edited_with_doubao_voice",
       "new_h3_generation": false
+    },
+    {
+      "id": "lulu-short-drama-tutorial",
+      "path": "experiments/lulu-short-drama-tutorial",
+      "status": "38s_edited_and_decoded",
+      "new_voiceover": false,
+      "original_drama_frames": 362
     }
   ],
   "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git",

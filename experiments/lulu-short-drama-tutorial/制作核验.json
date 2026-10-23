@@ -1,0 +1,15 @@
+{
+  "width": 720,
+  "height": 1280,
+  "fps": 24.0,
+  "duration": 38.0,
+  "frames": 912,
+  "source_frames_preserved": 362,
+  "source_clip_start_seconds": 2,
+  "source_clip_end_seconds": 17.083333333333332,
+  "new_voiceover": false,
+  "new_model_inference": false,
+  "source_sha256": "bf6a278dca35fed61907d43a09014cd1768b3e9d7d811eab3c765465a0606756",
+  "source_audio_preserved_before_aac_encoding": true,
+  "audio_samples": 1824000
+}
