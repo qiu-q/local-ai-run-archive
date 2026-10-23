@@ -78,3 +78,7 @@ Qwen Image 2.1 用于根据文字要求编辑已有图片，并支持多张参�
 - 模特与服装示例：[Comfy-Org 官方模板](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_2_1_image_edit.json)。水杯照片：[KATRIN BOLOVTSOVA / Pexels](https://www.pexels.com/photo/white-ceramic-mug-on-white-table-6312237/)。水豚及第三方素材的权利归原权利人，成果归档不产生额外授权。
 
 最后更新：**2026-10-23 · Asia/Shanghai**。
+
+## H3 专题项目
+
+[H3 Video Lab：首尾帧、时长参数、动作参考与实跑证据](https://github.com/qiu-q/h3-video-lab)。其中动作迁移方案尚未实跑，已有十套舞蹈为提示词重新生成。

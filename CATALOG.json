@@ -28,5 +28,14 @@
   ],
   "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git",
   "visibility": "public",
-  "showcase_url": "https://qiu-q.github.io/local-ai-run-archive/"
+  "showcase_url": "https://qiu-q.github.io/local-ai-run-archive/",
+  "related_projects": [
+    {
+      "id": "h3-video-lab",
+      "url": "https://github.com/qiu-q/h3-video-lab",
+      "local_path": "C:/Users/Administrator/Desktop/H3-Video-Lab",
+      "status": "public_documentation_and_existing_run_evidence",
+      "motion_transfer": "planned_not_tested"
+    }
+  ]
 }
