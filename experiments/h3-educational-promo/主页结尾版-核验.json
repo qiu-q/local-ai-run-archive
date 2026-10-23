@@ -1,0 +1,56 @@
+{
+  "width": 720,
+  "height": 1280,
+  "fps": 24.0,
+  "frames": 708,
+  "duration": 29.5,
+  "voice": "zh_female_vv_uranus_bigtts",
+  "voice_fitting": [
+    {
+      "line": 0,
+      "timing_speed_factor": 1,
+      "speech_seconds": 3.096,
+      "slot_seconds": 3.8
+    },
+    {
+      "line": 1,
+      "timing_speed_factor": 1,
+      "speech_seconds": 3.096,
+      "slot_seconds": 3.9000000000000004
+    },
+    {
+      "line": 2,
+      "timing_speed_factor": 1,
+      "speech_seconds": 2.184,
+      "slot_seconds": 2.8
+    },
+    {
+      "line": 3,
+      "timing_speed_factor": 1,
+      "speech_seconds": 5.616,
+      "slot_seconds": 6.399999999999999
+    },
+    {
+      "line": 4,
+      "timing_speed_factor": 1,
+      "speech_seconds": 2.4,
+      "slot_seconds": 3.200000000000003
+    },
+    {
+      "line": 5,
+      "timing_speed_factor": 1,
+      "speech_seconds": 3.816,
+      "slot_seconds": 4.299999999999997
+    },
+    {
+      "line": 6,
+      "timing_speed_factor": 1,
+      "speech_seconds": 3.984,
+      "slot_seconds": 5.100000000000001
+    }
+  ],
+  "new_H3_generation": false,
+  "source_archive": "local-ai-run-archive",
+  "upscaled_from_low_resolution_sources": true,
+  "audio_decoded_samples": 1416000
+}
