@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-26",
   "timezone": "Asia/Shanghai",
   "status": "github_archive",
   "experiments": [
@@ -34,9 +34,10 @@
     {
       "id": "lulu-short-drama-tutorial",
       "path": "experiments/lulu-short-drama-tutorial",
-      "status": "38s_edited_and_decoded",
-      "new_voiceover": false,
-      "original_drama_frames": 362
+      "status": "44s_dynamic_edit_with_full_voiceover_verified",
+      "new_voiceover": true,
+      "original_drama_frames": 362,
+      "latest_version": "一天一个Codex小知识-AI短剧教程-动态精剪版.mp4"
     }
   ],
   "github_remote": "https://github.com/qiu-q/local-ai-run-archive.git",

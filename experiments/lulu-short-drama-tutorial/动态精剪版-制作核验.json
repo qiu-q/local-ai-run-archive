@@ -1,0 +1,64 @@
+{
+  "width": 720,
+  "height": 1280,
+  "fps": 24.0,
+  "duration": 44.0,
+  "frames": 1056,
+  "source_frames_preserved": 362,
+  "source_clip_start_seconds": 6,
+  "source_clip_end_seconds": 21.083333333333332,
+  "new_voiceover": true,
+  "voice_segments": [
+    {
+      "line": 0,
+      "start": 0,
+      "duration": 5.592,
+      "speed_factor": 1
+    },
+    {
+      "line": 1,
+      "start": 21.083333,
+      "duration": 4.016666666666667,
+      "speed_factor": 1.07551867219917
+    },
+    {
+      "line": 2,
+      "start": 25.25,
+      "duration": 4.01,
+      "speed_factor": 1.167082294264339
+    },
+    {
+      "line": 3,
+      "start": 29.416667,
+      "duration": 4.013333333333334,
+      "speed_factor": 1.1661129568106312
+    },
+    {
+      "line": 4,
+      "start": 33.583333,
+      "duration": 4.128,
+      "speed_factor": 1
+    },
+    {
+      "line": 5,
+      "start": 38.5,
+      "duration": 3.36,
+      "speed_factor": 1
+    }
+  ],
+  "new_model_inference": false,
+  "source_sha256": "bf6a278dca35fed61907d43a09014cd1768b3e9d7d811eab3c765465a0606756",
+  "source_audio_preserved_before_aac_encoding": true,
+  "audio_samples": 2112000,
+  "version": "dynamic_editorial_v2",
+  "opening_motion_sample_changes": [
+    10.641342592592592,
+    56.75284722222222,
+    9.611064814814815,
+    55.495115740740744,
+    15.966550925925926
+  ],
+  "opening_source": "raw H3 Lulu_Yes_Work_01_00001_.mp4",
+  "voice_reused_from_previous_approved_version": true,
+  "teaching_overlays": "animated diagrams and illustrative tracks, not screen recordings"
+}
